@@ -11,6 +11,17 @@ namespace recon {
 			m_index = 0;
 		}
 
+		SemanticLabel(const SemanticLabel& l) {
+			m_name = l.m_name;
+			m_index = l.m_index;
+		}
+
+		SemanticLabel operator=(const SemanticLabel& l) {
+			m_name = l.m_name;
+			m_index = l.m_index;
+			return *this;
+		}
+
 		bool operator==(const SemanticLabel& l) {
 			return m_index == l.m_index;
 		}

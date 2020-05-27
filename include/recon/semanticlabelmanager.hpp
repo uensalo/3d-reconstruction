@@ -3,7 +3,6 @@
 #define	__recon_semanticmanager_h__
 
 #include "recon/common.hpp"
-#include "recon/typedefines.hpp"
 #include "recon/semanticlabel.hpp"
 
 namespace recon {

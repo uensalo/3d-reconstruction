@@ -27,10 +27,13 @@ SemanticLabelManager:: SemanticLabelManager(const std::string& filename) {
 			m_color_to_label_map.insert(std::pair<std::string, SemanticLabel>(color_str, label));
 			m_index_to_label_map.push_back(label);
 		}
-		
 	}
 }
 
 SemanticLabel SemanticLabelManager::get_label(const std::string& color_str) const {
-	return m_color_to_label_map.find(color_str)->second;
+	auto val = m_color_to_label_map.find(color_str);
+	if (val == m_color_to_label_map.end()) {
+		return SemanticLabel();
+	}
+	return val->second;
 }
