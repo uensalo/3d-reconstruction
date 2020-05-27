@@ -1,0 +1,8 @@
+Field Name|Schema|Units: Intrinsics|[fx, fy, fx, cy, s]|Pixels; Rotation|[x y z w]|Quaternion; Translation|[x y z]|mm; Distortion|[k1 k2 k3]|-; Reference|[Ref]|-; Pixel Array|[wxh]|Pixels; Sensor Size|[wxh]|mm;
+[546.85474, 546.1455, 321.0402, 224.9638, 0.0]
+[0.7051052, -0.7090436, 0.007551957, 0.0027635132]
+[-0.0105528645, 0.0017572808, -0.0]
+[0.06442407, 0.21935692, -0.5105902, 0.0, 0.0]
+0
+640x480
+3.2x2.4
