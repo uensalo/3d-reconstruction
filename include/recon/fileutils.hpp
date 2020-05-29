@@ -79,9 +79,9 @@ namespace recon::fileutils {
 
 		for (Vertex v : verts) {
 			double3 coord;
-			coord.x = v.coord()[0] / v.coord()[3];
-			coord.y = v.coord()[1] / v.coord()[3];
-			coord.z = v.coord()[2] / v.coord()[3];
+			coord.x = v.coord().x() / v.coord().w();
+			coord.y = v.coord().y() / v.coord().w();
+			coord.z = v.coord().z() / v.coord().w();
 
 			uchar3 color;
 			color.r = (unsigned char)(v.color()[0] * 255);

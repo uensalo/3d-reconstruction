@@ -27,8 +27,8 @@ void Scene::save_scene(const std::string &filename, const SemanticLabelManager& 
 					avg.z() += v.coord().z();
 				}
 				avg = avg / instance.size();
-				for (Vertex v : instance) {
-					v.set_coord(v.coord() - avg);
+				for (int i = 0; i < instance.size(); i++) {
+					instance[i].set_coord(instance[i].coord() - avg);
 				}
 			}
 			fileutils::write_to_ply(instance, filename + "_" + manager.get_label(idx).m_name);
@@ -48,8 +48,8 @@ void Scene::center_point_cloud() {
 		avg.z() += v.coord().z();
 	}
 	avg = avg / m_vertices.size();
-	for (Vertex v : m_vertices) {
-		v.set_coord(v.coord() - avg);
+	for (int i = 0; i < m_vertices.size(); i++) {
+		m_vertices[i].set_coord(m_vertices[i].coord() - avg);
 	}
 }
 
